@@ -1,0 +1,52 @@
+{
+  "required_prefixes": [
+    "type:",
+    "area:",
+    "impact:"
+  ],
+  "allowed": {
+    "type:": [
+      "ui",
+      "ux",
+      "feature",
+      "bug",
+      "docs",
+      "chore",
+      "refactor",
+      "perf",
+      "security",
+      "build",
+      "ci",
+      "deps",
+      "design",
+      "infra",
+      "release",
+      "i18n",
+      "l10n",
+      "test",
+      "hotfix"
+    ],
+    "area:": [
+      "ux",
+      "api",
+      "api/v1",
+      "api/v2",
+      "api/v3",
+      "rules",
+      "rules/layering",
+      "dem",
+      "drawings",
+      "infra",
+      "vworld"
+    ],
+    "impact:": [
+      "breaking",
+      "normal",
+      "security",
+      "performance",
+      "documentation",
+      "none"
+    ]
+  },
+  "case_insensitive": true
+}

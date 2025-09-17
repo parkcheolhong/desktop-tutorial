@@ -1,0 +1,7 @@
+{
+  "required_checks": [
+    "build",
+    "unit-test",
+    "e2e-chrome"
+  ]
+}
