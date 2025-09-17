@@ -1,0 +1,1 @@
+{ "required_checks": ["build","unit-test","e2e-chrome","e2e-firefox","e2e-webkit","label-policy","release-guard"] }

@@ -1,0 +1,23 @@
+{
+  "date_format": "YYYY.MM.DD",
+  "categories": ["Breaking","UI","UX","Added","Changed","Fixed","Performance","Security","Docs","Chore"],
+  "section_order": ["Breaking","UI","UX","Added","Changed","Fixed","Performance","Security","Docs","Chore"],
+  "labels_to_categories": {
+    "impact:breaking": "Breaking",
+    "type:ui": "UI",
+    "type:ux": "UX",
+    "area:ux": "UX",
+    "bug": "Fixed",
+    "enhancement": "Added",
+    "docs": "Docs",
+    "chore": "Chore"
+  },
+  "notes_heading": "Notes",
+  "contributors": {
+    "heading": "Contributors",
+    "format": "table",
+    "show_emails": false,
+    "link_handles": true,
+    "min_commits": 1
+  }
+}
