@@ -150,10 +150,11 @@ jobs:
       - name: Guard (OWNER/MEMBER만 허용)
         if: >
           !contains(fromJson('["OWNER","MEMBER"]'), github.event.comment.author_association)
-        run: echo "skip: outsider" && exit 0
+        run: echo "skip outsider" && exit 0
 
       - uses: actions/checkout@v4
-        with: { ref: ${{ github.event.repository.default_branch }} }
+        with:
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Parse command
         id: parse
@@ -209,7 +210,7 @@ git push -u origin "$BR" || true
 
 # gh가 있으면 PR 자동 생성(없어도 무시)
 if command -v gh >/dev/null 2>&1; then
-  DEF="$(gh api /repos/${GITHUB_REPOSITORY:-$(git remote get-url origin | sed -n 's#.*github.com[:/]\([^/]*\)/\([^/.]*\).*#\1/\2#p')} --jq .default_branch 2>/dev/null || echo main)"
+  DEF="$(gh api /repos/"${GITHUB_REPOSITORY:-$(git remote get-url origin | sed -n 's#.*github.com[:/]\([^/]*\)/\([^/.]*\).*#\1/\2#p')}" --jq .default_branch 2>/dev/null || echo main)"
   gh pr create --base "$DEF" --head "$BR" --title "chore: add RepoPilot (Actions-only) MVP" --body "Adds comment-driven policy PR workflow."
 else
   echo "NOTE: gh 미설치. 웹에서 PR을 생성하시면 됩니다."
