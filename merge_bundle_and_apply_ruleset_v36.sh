@@ -56,7 +56,7 @@ echo ">> Cloning $OWNER/$REPO under $TMPDIR ..."
 gh repo clone "$OWNER/$REPO" "$TMPDIR/repo" -- -q
 cd "$TMPDIR/repo"
 
-DEFAULT_BRANCH="$(gh api /repos/$OWNER/$REPO --jq '.default_branch')"
+DEFAULT_BRANCH="$(gh api /repos/"$OWNER"/"$REPO" --jq '.default_branch')"
 echo ">> Default branch: $DEFAULT_BRANCH"
 
 echo ">> Creating branch $BR"
