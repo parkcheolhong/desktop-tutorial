@@ -98,8 +98,6 @@ jobs:
         path: ~/.cache 
         # An explicit key for restoring and saving the cache
         key: ${{ runner.os }}-codeql-cache-${{ github.sha }}
-with:
-    key: ${{ steps.restore-cache.outputs.cache-primary-key }} 
         # An ordered multiline string listing the prefix-matched keys, that are used for restoring stale cache if no cache hit occurred for key. Note `cache-hit` returns false in this case.
         restore-keys: # optional
         # The chunk size used to split up large files during upload, in bytes

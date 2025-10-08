@@ -28,7 +28,14 @@ Reviewed the RepoPilot MVP repository setup for code quality, syntax errors, and
 - **Lines 153, 156:** Same YAML syntax issues as above
 - **Fix:** Applied same corrections to the script that generates the workflow
 
-### 3. ShellCheck Warnings
+### 3. YAML Syntax Error in `.github/workflows/codeql.yml`
+**Severity:** High (workflow would fail)
+
+- **Lines 101-102:** Duplicate `with:` block with incorrect indentation
+- **Problem:** The Cache action step had two `with:` blocks - one at line 96 (correct) and a duplicate at line 101 with different indentation, causing YAML parsing error
+- **Fix:** Removed the duplicate `with:` block and merged the additional parameters into the correct `with:` block
+
+### 4. ShellCheck Warnings
 
 #### Issue 1: Unquoted variable in `repopilot-mvp-offline.sh`
 - **Line 213:** `gh api /repos/${GITHUB_REPOSITORY:-...}`
@@ -73,7 +80,7 @@ Reviewed the RepoPilot MVP repository setup for code quality, syntax errors, and
 ## Recommendations
 
 ### Implemented ✅
-1. Fixed all YAML syntax errors
+1. Fixed all YAML syntax errors (including duplicate `with:` block in codeql.yml)
 2. Fixed all shellcheck warnings
 3. Verified all scripts have proper bash error handling (`set -euo pipefail`)
 
@@ -86,7 +93,7 @@ Reviewed the RepoPilot MVP repository setup for code quality, syntax errors, and
 ## Summary
 
 All critical issues have been fixed:
-- ✅ 2 YAML syntax errors (would have prevented workflow from running)
+- ✅ 3 YAML syntax errors (would have prevented workflows from running)
 - ✅ 3 shellcheck warnings (potential runtime issues with word splitting)
 - ✅ All validation tests pass
 - ✅ All functional tests pass
