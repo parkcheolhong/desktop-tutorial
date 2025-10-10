@@ -2,8 +2,6 @@
 
 This repository contains the RepoPilot MVP implementation - a comment-driven policy management system for GitHub repositories.
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
-
 ## 📚 문서 (Documentation)
 
 ### 병합 관련 (Merge Documentation)
