@@ -1,2 +1,2 @@
 
-- release template: set test=value
+- labels: add type:integration-test
