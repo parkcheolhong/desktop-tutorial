@@ -1,2 +1,2 @@
 
-- checks: set to [build,unit-test,e2e-chrome]
+- labels: add type:integration-test
