@@ -1,0 +1,14 @@
+# Exclude version control
+.git
+.gitignore
+
+# Exclude GitHub workflows and configuration
+.github
+
+# Exclude build artifacts and dependencies
+node_modules
+dist
+
+# Exclude temporary files
+*.tmp
+*.log

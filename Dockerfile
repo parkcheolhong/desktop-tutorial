@@ -1,7 +1,7 @@
 # Minimal Dockerfile for desktop-tutorial repository
 # This allows the Anchore security scanning workflow to run successfully
 
-FROM alpine:latest
+FROM alpine:3.19
 
 # Add a label for documentation
 LABEL maintainer="desktop-tutorial"
