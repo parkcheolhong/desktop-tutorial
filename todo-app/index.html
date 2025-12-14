@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 목록 (To-Do List)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 할 일 목록</h1>
+        </header>
+        
+        <div class="input-section">
+            <form id="todo-form">
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    placeholder="새로운 할 일을 입력하세요..." 
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="btn-add">추가</button>
+            </form>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="active">진행중</button>
+            <button class="filter-btn" data-filter="completed">완료</button>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-label">전체</span>
+                <span class="stat-value" id="total-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">진행중</span>
+                <span class="stat-value" id="active-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">완료</span>
+                <span class="stat-value" id="completed-count">0</span>
+            </div>
+        </div>
+
+        <div class="todo-list-container">
+            <ul id="todo-list" class="todo-list">
+                <!-- 할 일 항목이 여기에 동적으로 추가됩니다 -->
+            </ul>
+            <div class="empty-state" id="empty-state">
+                <p>📋 할 일이 없습니다.</p>
+                <p>위에 새로운 할 일을 추가해보세요!</p>
+            </div>
+        </div>
+
+        <div class="actions-section">
+            <button id="clear-completed" class="btn-clear">완료된 항목 모두 삭제</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
