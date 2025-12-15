@@ -43,7 +43,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - language: actions
+        # 저장소의 실제 언어에 맞게 JavaScript/TypeScript 분석 설정
+        # 이 저장소는 JavaScript(24.9%), Shell(46.2%), CSS(20.4%), HTML(7.1%)로 구성되어 있으며,
+        # 주요 애플리케이션 코드는 JavaScript로 작성되어 있습니다.
+        # CodeQL은 JavaScript와 TypeScript를 함께 분석할 수 있는 'javascript-typescript' 언어를 지원합니다.
+        # 'actions' 언어는 GitHub Actions 워크플로우 파일 자체를 분석하는 것으로,
+        # 실제 애플리케이션 코드의 보안 취약점 검사에는 적합하지 않아 제거했습니다.
+        - language: javascript-typescript
           build-mode: none
         # CodeQL supports the following values keywords for 'language': 'actions', 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'rust', 'swift'
         # Use `c-cpp` to analyze code written in C, C++ or both
