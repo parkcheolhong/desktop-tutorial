@@ -4,6 +4,9 @@ This repository contains the RepoPilot MVP implementation - a comment-driven pol
 
 ## 📚 문서 (Documentation)
 
+### Git/GitHub 기본 가이드 (Git/GitHub Basics)
+- **[로컬 환경 업그레이드 (Pull Tutorial)](docs/PULL_TUTORIAL.md)** - 원격 저장소에서 변경사항 가져오기
+
 ### 병합 관련 (Merge Documentation)
 - **[빠른 병합 참조 (Quick Merge Reference)](QUICK_MERGE.md)** - 가장 자주 사용하는 병합 방법 요약
 - **[병합 가이드 (Merge Guide)](MERGE_GUIDE.md)** - PR 병합, Git 병합, 번들 병합 등 다양한 병합 방법 상세 설명
